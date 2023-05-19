@@ -1,6 +1,6 @@
 <h1>Formulario de Cadastro :: Imoveis</h1>
 
-<form action="<?= url('/imoveis/store'); ?>" method="POST">
+<form action="<?= url('/imoveis/store'); ?>" method="post">
 
 <?= csrf_field();?>
 
@@ -9,7 +9,7 @@
 
 <br>
 
-<label for="description">Descriçãol</label>
+<label for="description">Descrição</label>
 <textarea name="description" id="title" cols="30" rows="10"></textarea>
 
 <br>

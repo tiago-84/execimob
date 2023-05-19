@@ -22,3 +22,5 @@ Route::get('/imoveis', [PropertyController::class, 'index']);
 
 Route::get('/imoveis/novo', [PropertyController::class, 'create']);
 Route::post('/imoveis/store', [PropertyController::class, 'store']);
+
+Route::get('/imoveis/{id}', [PropertyController::class, 'show']);
