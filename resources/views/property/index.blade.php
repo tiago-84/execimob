@@ -1,18 +1,24 @@
+@extends('property.master')
+
+@section('content')
+
+<div class="container my-3">
+
 <h1>Listagem de Produtos</h1>
-<p><a href="<?= url('/imoveis/novo') ?>">Cadastre um novo imovel</a></p>
+
 
 <?php
 
     if(!empty($properties)){
 
-        echo "<table>";
+        echo "<table class='table table-striped table-hover'>";
 
-            echo "<tr>
+            echo "<thead class='bg-primary text-white'>
                     <td>Titulo</td>
                     <td>Valor de Aluguel</td>
                     <td>Valor de Compra</td>
                     <td>Ações</td>
-                 </tr>";
+                 </thead>";
 
 
         foreach($properties as $property){
@@ -34,3 +40,8 @@
             echo "</table>";
 
     }
+
+    ?>
+    </div>
+
+    @endsection
